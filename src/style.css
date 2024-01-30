@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+h3{
+  margin: 40px 0 ;
+  opacity: 0.2;
+}
+main {
+  /*background-image: url("https://wallpapercave.com/wp/wp11035780.jpg");*/
+  background-size: cover;
+  background-position: center;
+  padding: 5px 30px;
+  max-width:700px;
+  margin: 0 auto;
+}
+.grid,
+.weather-forecast {
+  position: relative;
+  max-width: 320px;
+  min-height: auto;
+  background: rgba(145, 2, 145, 0.01);
+  font-family: "Inter", sans-serif;
+  backdrop-filter: brightness(30%);
+  border-radius: 10px;
+  padding: 20px;
+  color: whitesmoke;
+  text-align: center;
+  border: 2px solid rgb(242, 232, 242);
+  margin: 20px 0;
+ 
+}
+
+.search-box {
+  width: 80%;
+  padding: 8px 30px;
+  background: transparent;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+}
+.bx-map {
+  position: relative;
+  left: 25px;
+  top: 1px;
+}
+
+.search-box::placeholder {
+  color: white;
+  padding: 0 5px;
+}
+.bx-search {
+  background: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  right: 50px;
+  top: 27px;
+  border: none;
+}
+.info-weather {
+  padding: 20px 0;
+  display: grid;
+  gap: 5px;
+}
+h1,
+.description {
+  text-transform: capitalize;
+}
+.day,
+.time,
+.description {
+  font-size: medium;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+.icon {
+  width: 150px;
+  height: auto;
+}
+.temperature {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  font-size: 64px;
+}
+.units {
+  position: relative;
+  top: -30px;
+}
+.extras {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  position: relative;
+  bottom: -30px;
+   padding-bottom: 30px;
+}
+.bx-wind,
+.bx-water {
+  font-size: 30px;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+ul {
+  margin-top: 20px;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+ul li {
+  border-bottom: 1px solid rgb(242, 232, 242);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  font-size: 22px;
+}
+.min-max p {
+  display: inline;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.min-max img {
+  max-width: 20px;
+  position: relative;
+  top: 4px;
+}
+.min {
+  opacity: 0.5;
+}
+h2 {
+  opacity: 0.3;
+  font-size: 30px;
+}
+
+
+footer p{
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+.not-found{
+  position: relative ;
+  top: 0;
+  right: 100px;
+  width: 100%;
+  text-align: center;
+  margin: 110px;
+  
+}
+.bx-message-alt-error{
+ 
+  font-size: 72px;
+}
+
+.box-1,
+.weather-forecast,
+.extras,
+.not-found {
+  opacity: 0;
+  transform: translateX(50px); 
+  transition: opacity 1000ms ease-in-out, transform 1000ms ease-in-out;
+}
+
+/* Apply transition on the opacity and transform properties */
+.box-1.appear,
+.weather-forecast.appear,
+.extras.appear,
+.not-found.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
